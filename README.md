@@ -10,7 +10,9 @@ Tutors: Luca Tarasi, Simone Borelli
 
 This repository contains my MATLAB solution to the final exam exercise of the *Modelling and Control of Manipulators* course. It implements, from scratch (no built-in MATLAB kinematics functions), a full inverse-kinematics control loop for a 7-joint industrial manipulator — 6 revolute joints plus one prismatic joint (joint 6) — and uses it to drive first the **tool frame** `<t>` and then the **end-effector frame** `<e>` to two different goal poses.
 
-The manipulator's geometry (link frames and dimensions) matches the CAD model given in the exam text (`Figure 1`).
+The manipulator's geometry (link frames and dimensions) matches the CAD model given in the exam text (`Figure 1`), reproduced below.
+
+![CAD model of the robot](assets/cad_model.jpg)
 
 ## Problem statement
 
@@ -112,3 +114,5 @@ This runs both phases in sequence:
 ## Results
 
 For each phase, `plotManipulators.plotFinalConfig` shows the manipulator's final configuration in 3D together with the normalized angular and linear velocity components over time, confirming that the Cartesian error is driven toward zero and the controlled frame converges to its goal pose.
+
+![Angular and linear velocity components over time](assets/velocity_plots.jpg)
